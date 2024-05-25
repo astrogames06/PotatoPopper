@@ -1,0 +1,1 @@
+em++ -o index.html main.cpp Game.cpp Potato.cpp ./llib/libraylib.a -std=c++17 -Os -Wall -I. -I include/ -L. -L llib/ -s USE_GLFW=3 --shell-file shell.html -DPLATFORM_WEB
