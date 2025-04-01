@@ -76,9 +76,14 @@ void Game::Draw()
         for (int i = 0; i < (int)fries.size(); i++)
         {
             DrawTextureV(FryTexture, fries[i], WHITE);
+            
+            // DrawRectangleLines(fries[i].x, fries[i].y, FryTexture.width, FryTexture.height, GREEN);
+            // DrawRectangleLinesEx(Rectangle{
+            //     potato.position.x-potato.texture.width/2, potato.position.y-potato.texture.height/2, (float)potato.texture.width, (float)potato.texture.height
+            // }, 1.f, GREEN);
 
             if (CheckCollisionRecs(Rectangle{
-                potato.position.x, potato.position.y, (float)potato.texture.width, (float)potato.texture.height
+                potato.position.x-potato.texture.width/2, potato.position.y-potato.texture.height/2, (float)potato.texture.width, (float)potato.texture.height
             }, Rectangle{fries[i].x, fries[i].y, (float)FryTexture.width, (float)FryTexture.height}))
             {
                 score++;
